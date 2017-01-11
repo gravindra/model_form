@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "model_form"
   gem.homepage = "http://github.com/gravindra/model_form"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{ModelForm: Save Your Time}
+  gem.description = %Q{ModelForm: Avoid writing html helper}
   gem.email = "ravighare26@gmail.com"
-  gem.authors = ["gravindra"]
+  gem.authors = ["gravindra", "waqar-baig", "vipin235", "sandyrocks"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
