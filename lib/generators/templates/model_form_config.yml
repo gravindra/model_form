@@ -1,0 +1,3 @@
+global_ignored_attributes: ['created_at', 'updated_at', 'id']
+Post:
+  ignored_attributes: ['name']
