@@ -1,0 +1,13 @@
+#Global ignored attributes are active by default
+global:
+  ignored_attributes: ['created_at', 'updated_at', 'id']
+
+#If you want to ignore or allow the attribute on model level
+#Look at the below configuration
+
+# post:
+#   ignored_attributes: ['name']
+#   allowed_attributes: ['id']
+# comment:
+#   ignored_attributes: ['post_id']
+#   allowed_attributes: ['created_at', 'updated_at']
