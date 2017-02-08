@@ -1,6 +1,16 @@
-= model_form
+= model_form(beta)
 
-Description goes here.
+* Generate form with one line of code.
+
+== Overview
+* This Gem act as a wrapper to simple_form gem and bootstrap.
+* You can use this gem to create forms in quickest possible way.
+* If you are already using simple_form gem in your application, you can use this gem to avoid writing code.
+
+== Usage
+* Add gem 'model_form' to your Gemfile
+* Run bundle
+* Add model_form(instance_of_model) eg. <%= model_form(@user) %>
 
 == Contributing to model_form
  
