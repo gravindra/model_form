@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.authors = ["gravindra", "waqar-baig", "vipin235", "sandyrocks"]
   s.date = "2017-01-11"
-  s.description = "TODO: longer description of your gem"
+  s.description = "Generate form with one line of code."
   s.email = "ravighare26@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",

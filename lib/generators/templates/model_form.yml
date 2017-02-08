@@ -7,7 +7,7 @@ global:
 
 # post:
 #   ignored_attributes: ['name']
-#   allowed_attributes: ['id']
+#   allowed_attributes: ['created_at']
 # comment:
 #   ignored_attributes: ['post_id']
 #   allowed_attributes: ['created_at', 'updated_at']
