@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["gravindra", "waqar-baig", "vipin235", "sandyrocks"]
-  s.date = "2017-01-11"
-  s.description = "Generate form with one line of code."
+  s.date = "2017-02-08"
+  s.description = "ModelForm: Avoid writing html helper"
   s.email = "ravighare26@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -21,18 +21,22 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/generators/model_form_generator.rb",
+    "lib/generators/templates/model_form.yml",
     "lib/model_form.rb",
+    "model_form.gemspec",
     "test/helper.rb",
     "test/test_model_form.rb"
   ]
   s.homepage = "http://github.com/gravindra/model_form"
   s.licenses = ["MIT"]
-  s.rubygems_version = "2.4.8"
-  s.summary = "ModelForm: Save time with ModelForm"
+  s.rubygems_version = "2.5.1"
+  s.summary = "ModelForm: Save Your Time"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
