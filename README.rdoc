@@ -2,7 +2,7 @@
 
 * Generate form with one line of code.
 
- Overview
+== Overview
 * This Gem act as a wrapper to simple_form gem and bootstrap.
 * You can use this gem to create forms in quickest possible way.
 * If you are already using simple_form gem in your application, you can use this gem to avoid writing code.
