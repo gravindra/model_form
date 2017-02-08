@@ -13,7 +13,8 @@
 * Add model_form(instance_of_model) eg. <%= model_form(@user) %>
 * You can also pass the same number of parameters as of simple_form_for
 * e.g. <%= model_form @user, url: 'users/someurl', html: { class: 'form-vertical'} %>
-
+* You can also explicitly specify fields that you want on a particular form by using fields options
+ <%= model_form @user, url: 'users/someurl', html: { class: 'form-vertical'}, fields: ['first_name','contact_number'] %>
 == Contributing to model_form
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
