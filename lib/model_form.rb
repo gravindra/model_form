@@ -1,12 +1,14 @@
 module ModelForm
-  # takes ActiveRecord object
   CONFIG_FILE = "/config/model_form.yml"
 
-  def model_form resource
-    simple_form_for resource do |f|
+  # takes ActiveRecord object
+  def model_form resource, options={}
+    default_options = {:html => { :class => 'form-horizontal' }}
+    default_options.deep_merge! options
+    simple_form_for resource, default_options do |f|
       visible_fields(resource).each {|attr_name| concat f.input(attr_name) }
-        concat f.button(:submit)
-        concat cancel_link(resource)
+      concat f.button(:submit)
+      concat cancel_link(resource)
     end
   end
 
@@ -15,7 +17,8 @@ module ModelForm
   end
 
   def cancel_link resource
-    link_to 'cancel', send(resource.model_name.collection + '_path')
+    link_to t('.cancel', :default => t("helpers.links.cancel")),
+      send(resource.model_name.collection + '_path'), :class => 'btn btn-default'
   end
 
   def ignored_attributes resource

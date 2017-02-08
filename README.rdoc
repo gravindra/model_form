@@ -11,9 +11,11 @@
 * Add gem 'model_form' to your Gemfile
 * Run bundle
 * Add model_form(instance_of_model) eg. <%= model_form(@user) %>
+* You can also pass the same number of parameters as of simple_form_for
+* e.g. <%= model_form @user, url: 'users/someurl', html: { class: 'form-vertical'} %>
 
 == Contributing to model_form
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
