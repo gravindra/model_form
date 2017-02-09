@@ -6,11 +6,19 @@ module ModelForm
     default_options = {:html => { :class => 'form-horizontal' }}
     default_options.deep_merge! options
     simple_form_for resource, default_options do |f|
-      visible_fields(resource).each {|attr_name| concat f.input(attr_name) }
+      visible_fields(@resource).each do |attr_name|
+        if is_reflection?(attr_name)
+          concat f.association(attr_name.to_s.gsub(/_id$/, ''), prompt: "Select a #{attr_name.titleize}")
+        else
+          concat f.input(attr_name)
+        end
+      end
       concat f.button(:submit)
       concat cancel_link(resource)
     end
   end
+
+  private
 
   def visible_fields resource
     (resource.attribute_names - ignored_attributes(resource)) | allowed_attributes(resource)
@@ -49,6 +57,10 @@ module ModelForm
       YAML.load_file File.expand_path(base_file, __FILE__)
     end
 
+  end
+
+  def is_reflection? attr_name
+    @resource.class.reflections.has_key?(attr_name.to_s.gsub(/_id$/, ''))
   end
 
   ActionView::Base.send :include, ModelForm
