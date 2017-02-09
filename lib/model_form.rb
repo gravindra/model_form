@@ -6,7 +6,7 @@ module ModelForm
     default_options = {:html => { :class => 'form-horizontal' }}
     default_options.deep_merge! options
     simple_form_for resource, default_options do |f|
-     form_fields =  options[:fields] ? options[:fields] & visible_fields(resource) : visible_fields(resource)
+     form_fields =  options[:fields].is_a?(Array) ? options[:fields] & visible_fields(resource) : visible_fields(resource)
      form_fields.each {|attr_name| concat f.input(attr_name) }
       concat f.button(:submit)
       concat cancel_link(resource)
